@@ -50,8 +50,9 @@ export const PROJECTS: Project[] = [
     description:
       "Wedding-planning SPA with 7 routes, 11 shared components and a typed data layer. Deployed on Vercel with no backend.",
     tags: ["React", "TypeScript", "Vite", "Vercel"],
-    image: "/assets/placeholder-5.svg",
-    status: "wip",
+    image: "/assets/wedding-and-romance.png",
+    status: "live",
+    liveUrl: "https://www.weddingandromance.com/",
   },
   {
     title: "Konkuk Ideathon",

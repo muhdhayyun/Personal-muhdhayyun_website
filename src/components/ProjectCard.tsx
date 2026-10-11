@@ -2,6 +2,16 @@ import type { Project } from "../data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   const wip = project.status === "wip";
+  const preview = (
+    <img
+      src={project.image}
+      alt={`${project.title} preview`}
+      loading="lazy"
+      className={`aspect-video w-full border-b border-neutral-200 bg-neutral-100 object-cover dark:border-neutral-800 dark:bg-neutral-800 ${
+        wip ? "brightness-75 saturate-50" : ""
+      }`}
+    />
+  );
 
   return (
     <article
@@ -10,14 +20,13 @@ export function ProjectCard({ project }: { project: Project }) {
       }`}
     >
       <div className="relative">
-        <img
-          src={project.image}
-          alt={`${project.title} preview`}
-          loading="lazy"
-          className={`aspect-video w-full border-b border-neutral-200 bg-neutral-100 object-cover dark:border-neutral-800 dark:bg-neutral-800 ${
-            wip ? "brightness-75 saturate-50" : ""
-          }`}
-        />
+        {project.liveUrl ? (
+          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.title}`}>
+            {preview}
+          </a>
+        ) : (
+          preview
+        )}
         {wip && (
           <span className="absolute top-3 right-3 rounded-full bg-neutral-950/80 px-2.5 py-0.5 text-[0.65rem] font-semibold tracking-widest text-accent uppercase">
             WIP
