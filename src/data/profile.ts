@@ -31,7 +31,7 @@ export const PROFILE: Profile = {
   initials: "MH",
   title: "Computer Science undergrad building practical AI and full-stack products",
   tagline: "Singapore Management University · AI/ML · Full-stack",
-  email: "mhayyun.a.2024@smu.edu.sg",
+  email: "muhdhayyun@gmail.com",
   github: "https://github.com/muhdhayyun",
   linkedin: "https://www.linkedin.com/in/muhd-hayyun-986118198/",
   about:
