@@ -13,6 +13,15 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: "Wedding & Romance",
+    description:
+      "Wedding-planning SPA with 7 routes, 11 shared components and a typed data layer. Deployed on Vercel with no backend.",
+    tags: ["React", "TypeScript", "Vite", "Vercel"],
+    image: "/assets/wedding-and-romance.png",
+    status: "live",
+    liveUrl: "https://www.weddingandromance.com/",
+  },
+  {
     title: "Opine",
     description:
       "Conversational survey bot for university clubs, with an LLM-vs-LLM simulator and an automated judge that catches extraction errors.",
@@ -44,15 +53,6 @@ export const PROJECTS: Project[] = [
     tags: ["Python", "LLM Routing", "Pydantic"],
     image: "/assets/placeholder-4.svg",
     status: "wip",
-  },
-  {
-    title: "Wedding & Romance",
-    description:
-      "Wedding-planning SPA with 7 routes, 11 shared components and a typed data layer. Deployed on Vercel with no backend.",
-    tags: ["React", "TypeScript", "Vite", "Vercel"],
-    image: "/assets/wedding-and-romance.png",
-    status: "live",
-    liveUrl: "https://www.weddingandromance.com/",
   },
   {
     title: "Konkuk Ideathon",
