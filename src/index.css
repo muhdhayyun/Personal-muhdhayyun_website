@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Dark mode is toggled by adding/removing the "dark" class on <html>,
+   controlled by useTheme() — see src/hooks/useTheme.ts */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Lilac accent. accent = fills/borders, accent-text = readable text/links
+     (darker in light mode, lighter in dark mode). */
+  --color-accent: #b79df2;
+  --color-accent-contrast: #1b1430;
+  --color-accent-text: #7351c4;
+}
+
+.dark {
+  --color-accent-text: #c9b8f5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+    font-family: var(--font-sans);
+  }
+}
